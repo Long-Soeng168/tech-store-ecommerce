@@ -1,21 +1,23 @@
+import Footer from '@/components/footer';
 import MyHeader from '@/components/my-header';
 import React from 'react'
 
 const ClientLayout = (
-    { 
-        children 
-    }
-    : 
     {
-        children: React.ReactNode;
+        children
     }
+        :
+        {
+            children: React.ReactNode;
+        }
 ) => {
     return (
         <>
             <MyHeader />
             <main className='max-w-screen-2xl mx-auto'>
-            {children}
+                {children}
             </main>
+            <Footer />
         </>
     )
 }
