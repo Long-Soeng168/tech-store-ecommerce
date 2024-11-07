@@ -99,8 +99,8 @@ const Footer = () => {
                 {/* start bank */}
                 <div className='py-4 flex flex-wrap justify-between items-center'>
                     <div className='flex gap-4'>
-                        <img src="/icons/ig.png" alt="" width={25} />
-                        <img src="/icons/fb.png" alt="" width={25} />
+                        <img src="/icons/ig.png" alt="" width={25} className='hover:cursor-pointer' />
+                        <img src="/icons/fb.png" alt="" width={25} className='hover:cursor-pointer' />
                     </div>
                     <div className='flex gap-4'>
                         <img src="/icons/banks/aba.jpg" alt="ABA" className='w-16 h-10 object-cover rounded-lg' />
