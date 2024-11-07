@@ -8,6 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import MyProductCard from './ui/my-product-card';
 
 const MyNewProduct = () => {
     return (
@@ -25,36 +26,10 @@ const MyNewProduct = () => {
                 >
                     <CarouselContent>
                         {Array.from({ length: 10 }).map((_, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/6">
-                                <Card className=''>
-                                    <CardContent className="flex flex-col p-6">
-                                        <div className='flex gap-2 text-sm text-green-500 items-center justify-start pb-2'>
-                                            <Verified className='' size={16} />
-                                            <p>instock</p>
-                                        </div>
-                                        <img
-                                            src={`/images/new-products/${index + 1}.png`} // Adjust the image extension if needed
-                                            alt={`Product ${index + 1}`}
-                                            className="w-32 h-32 object-cover ml-4" // Add image styling as required
-                                        />
-
-                                        <div className='flex gap-2 items-center py-4'>
-                                            <div className="flex">
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star className='fill-slate-300' strokeWidth={0} size={16} />
-                                            </div>
-                                            <p className='text-gray-400'>Reviews (4)</p>
-                                        </div>
-                                        <p >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</p>
-                                        <div className='py-4'>
-                                            <p className='text-gray-400 '>$499.00</p>
-                                            <p className='text-2xl font-semibold'>$499.00</p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
+                            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6">
+                                <CardContent className="flex flex-col p-6">
+                                    <MyProductCard />
+                                </CardContent>
                             </CarouselItem>
                         ))}
                     </CarouselContent>

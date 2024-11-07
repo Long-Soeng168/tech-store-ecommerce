@@ -17,7 +17,7 @@ const ClientLayout = (
             <main className='max-w-screen-2xl mx-auto'>
                 {children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

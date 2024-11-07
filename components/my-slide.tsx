@@ -23,19 +23,16 @@ const MySlide: React.FC<MySlideProps> = ({ images }) => {
             <CarouselContent>
                 {images.map((imageSrc, index) => (
                     <CarouselItem key={index}>
-                        <Card className="h-80 w-full overflow-hidden">
-                            <CardContent >
-                                <Image
-                                    src={imageSrc}
-                                    alt={`Slide image ${index + 1}`}
-                                    layout="responsive"
-                                    width={900}
-                                    height={500}
-                                    objectFit="cover"
-                                    priority={index === 0}
-                                />
-                            </CardContent>
-                        </Card>
+                        <CardContent >
+                            <Image
+                                src={imageSrc}
+                                alt={`Slide image ${index + 1}`}
+                                className='aspect-[26/6] w-full object-cover'
+                                width={900}
+                                height={500}
+                                priority={index === 0}
+                            />
+                        </CardContent>
                     </CarouselItem>
                 ))}
             </CarouselContent>
