@@ -70,3 +70,12 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

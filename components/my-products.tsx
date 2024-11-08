@@ -1,16 +1,203 @@
 import React from 'react'
-import { Star, StarHalf, Verified } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
-import Image from 'next/image';
+import MyTopProductCategory from './my_top_product_category';
+import MyProductCategory from './my_product_category';
+import BrandLogos from './BrandLogosProps ';
+import FeedbackList from './FeedbackCard';
 
 const Products = () => {
+
+
+    const productstop = [
+        {
+            id: 1,
+            name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
+            imageUrl: "/images/new-products/1.png",
+            price: 499.00,
+            oldPrice: 599.00,
+            rating: 3,
+            reviews: 4,
+            instock: "In Stock",
+        },
+        {
+            id: 2,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/2.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "Out Stock",
+        },
+        {
+            id: 3,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/3.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        {
+            id: 4,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        // Add more product objects as needed
+    ];
+    const products = [
+        {
+            id: 1,
+            name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
+            imageUrl: "/images/new-products/2.png",
+            price: 499.00,
+            oldPrice: 599.00,
+            rating: 3,
+            reviews: 4,
+            instock: "In Stock",
+        },
+        {
+            id: 2,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "Out Stock",
+        },
+        {
+            id: 3,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/3.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        {
+            id: 4,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        {
+            id: 5,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        {
+            id: 6,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: "In Stock",
+        },
+        // Add more product objects as needed
+    ];
+
+    const series = [
+        { title: 'MSI GE Series', isActive: true },
+        { title: 'MSI GT Series', isActive: false },
+        { title: 'MSI GL Series', isActive: false },
+        { title: 'MSI GS Series', isActive: false },
+    ];
+    const series1 = [
+        { title: 'MSI Infinute Series', isActive: true },
+        { title: 'MSI Triden', isActive: false },
+        { title: 'MSI GL Series', isActive: false },
+        { title: 'MSI Nightblade', isActive: false },
+    ];
+
+    const category =[
+        { id: 1, name: 'MSI Laptops', imageUrl: '/images/products/custome_build.png' },
+    ]
+
+    const category1 =[
+        { id: 1, name: 'Destops', imageUrl: '/images/products/custome_build.png' },
+    ]
+
+    const categorytop =[
+        { id: 1, name: 'Custome Builds', imageUrl: '/images/products/custome_build.png' },
+    ]
+    const categorytop1 =[
+        { id: 1, name: 'Gaming Monitors', imageUrl: '/images/products/custome_build.png' },
+    ]
+
+    const logos = [
+        { src: '/images/logo/brand/1.png', alt: 'Brand 1' },
+        { src: '/images/logo/brand/2.png', alt: 'Brand 2' },
+        { src: '/images/logo/brand/3.png', alt: 'Brand 3' },
+        { src: '/images/logo/brand/4.png', alt: 'Brand 4' },
+        { src: '/images/logo/brand/5.png', alt: 'Brand 5' },
+        { src: '/images/logo/brand/6.png', alt: 'Brand 6' },
+        { src: '/images/logo/brand/7.png', alt: 'Brand 7' },
+    ];
+    
+    const feedbacks = [
+        {
+            id: 1,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 2,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 3,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 4,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 5,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 6,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        {
+            id: 7,
+            image: '/images/feedback/1.png',
+            text: 'If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...',
+            date: '01.09.2020',
+        },
+        // Add more feedback items here
+    ];
+
     return (
         <div>
             <div className='flex items-center justify-center bg-blue-100 py-4'>
@@ -19,203 +206,23 @@ const Products = () => {
                     <span className='font-semibold text-2xl'>own</span><span className=' text-blue-400 px-2 text-3xl'>|</span> it now, up to 6 months interest free <span className='text-sm underline'>learn more</span>
                 </p>
             </div>
-            {/* start product category */}
-            <div className='py-4'>
-                <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full flex"
-                >
-                    <CarouselContent>
-                        <div className="relative min-w-[280px]">
-                            <Image
-                                src="/images/products/custome_build.png"
-                                alt="Custom Builds"
-                                layout="responsive"
-                                width={0}
-                                height={0}
-                                objectFit="cover"
-                                className="w-full h-full"
-                            />
-                            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-semibold text-3xl text-white">
-                                Custom Builds
-                            </p>
-                            <p className='absolute bottom-10 text-gray-300 text-xs underline text-center left-1/2 transform -translate-x-1/2'>
-                                See All Products
-                            </p>
-                        </div>
+            {/* start top product category */}
+            <MyTopProductCategory products={productstop} categories={categorytop}/>
+            {/* end top product category */}
 
-
-                        {Array.from({ length: 10 }).map((_, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/6">
-                                <Card className=''>
-                                    <CardContent className="flex flex-col p-6">
-                                        <div className='flex gap-2 text-sm text-green-500 items-center justify-start pb-2'>
-                                            <Verified className='' size={16} />
-                                            <p>instock</p>
-                                        </div>
-                                        <img
-                                            src={`/images/new-products/${index + 1}.png`} // Adjust the image extension if needed
-                                            alt={`Product ${index + 1}`}
-                                            className="w-32 h-32 object-cover ml-4" // Add image styling as required
-                                        />
-
-                                        <div className='flex gap-2 items-center py-4'>
-                                            <div className="flex">
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star fill="yellow" strokeWidth={0} size={16} />
-                                                <Star className='fill-slate-300' strokeWidth={0} size={16} />
-                                            </div>
-                                            <p className='text-gray-400'>Reviews (4)</p>
-                                        </div>
-                                        <p >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</p>
-                                        <div className='py-4'>
-                                            <p className='text-gray-400 '>$499.00</p>
-                                            <p className='text-2xl font-semibold'>$499.00</p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                </Carousel>
-            </div>
-            <div className='py-4'>
-                <ul className='flex gap-8 text-gray-400 font-semibold text-xl'>
-                    <li className=''>
-                        <p className='text-gray-900'>MSI GE Series</p>
-                        <div className='w-100 h-1 rounded-full bg-blue-500'></div>
-                    </li>
-                    <li>MSI GT Series</li>
-                    <li>MSI GL Series</li>
-                    <li>MSI GE Series</li>
-                </ul>
-                <div className='py-4'>
-                    <Carousel
-                        opts={{
-                            align: "start",
-                        }}
-                        className="w-full flex"
-                    >
-                        <CarouselContent>
-                            <div className="relative min-w-[280px]">
-                                <Image
-                                    src="/images/products/custome_build.png"
-                                    alt="Custom Builds"
-                                    layout="responsive"
-                                    width={0}
-                                    height={0}
-                                    objectFit="cover"
-                                    className="w-full h-full"
-                                />
-                                <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-semibold text-3xl text-white">
-                                    MSI Laptops
-                                </p>
-                                <p className='absolute bottom-10 text-gray-300 text-xs underline text-center left-1/2 transform -translate-x-1/2'>
-                                    See All Products
-                                </p>
-                            </div>
-
-
-                            {Array.from({ length: 10 }).map((_, index) => (
-                                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/6">
-                                    <Card className=''>
-                                        <CardContent className="flex flex-col p-6">
-                                            <div className='flex gap-2 text-sm text-green-500 items-center justify-start pb-2'>
-                                                <Verified className='' size={16} />
-                                                <p>instock</p>
-                                            </div>
-                                            <img
-                                                src={`/images/new-products/${index + 1}.png`} // Adjust the image extension if needed
-                                                alt={`Product ${index + 1}`}
-                                                className="w-32 h-32 object-cover ml-4" // Add image styling as required
-                                            />
-
-                                            <div className='flex gap-2 items-center py-4'>
-                                                <div className="flex">
-                                                    <Star fill="yellow" strokeWidth={0} size={16} />
-                                                    <Star fill="yellow" strokeWidth={0} size={16} />
-                                                    <Star fill="yellow" strokeWidth={0} size={16} />
-                                                    <Star fill="yellow" strokeWidth={0} size={16} />
-                                                    <Star className='fill-slate-300' strokeWidth={0} size={16} />
-                                                </div>
-                                                <p className='text-gray-400'>Reviews (4)</p>
-                                            </div>
-                                            <p >EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...</p>
-                                            <div className='py-4'>
-                                                <p className='text-gray-400 '>$499.00</p>
-                                                <p className='text-2xl font-semibold'>$499.00</p>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                    </Carousel>
-                </div>
-
-            </div>
-            {/* end product category */}
+            {/* start  product category */}
+            <MyProductCategory products={products} series={series} categories={category}/>
+            <MyProductCategory products={products} series={series1} categories={category1}/>
+            <MyTopProductCategory products={productstop} categories={categorytop1}/>
+            {/* end  product category */}
             
             {/* start brand logo */}
-            <div className='flex flex-wrap gap-16 justify-evenly items-center py-16'>
-                <img src="/images/logo/brand/1.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/2.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/3.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/4.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/5.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/6.png" alt="logo" width={120}/>
-                <img src="/images/logo/brand/7.png" alt="logo" width={120}/>
-            </div>
+            <BrandLogos logos={logos}/>
             {/* end brand logo */}
 
             {/* start Follow us on Instagram for News, Offers & More */}
 
-            <div className='flex justify-start gap-8 flex-wrap'>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-                <div className='py-4 max-w-56 flex flex-col items-center'>
-                    <img src="/images/feedback/1.png" alt="image" className='w-full object-cover' />
-                    <p className='text-center py-4 mx-2'>If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...</p>
-                    <p className='text-sm text-gray-400'>01.09.2020</p>
-                </div>
-            </div>
+            <FeedbackList feedbacks={feedbacks}/>
             {/* end Follow us on Instagram for News, Offers & More */}
 
         </div>

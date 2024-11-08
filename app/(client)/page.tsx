@@ -1,9 +1,7 @@
-import MyHeader from "@/components/my-header";
 import MyNewProduct from "@/components/my-new-product";
 import Products from "@/components/my-products";
 import MyService from "@/components/my-service";
 import MySlide from "@/components/my-slide";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
