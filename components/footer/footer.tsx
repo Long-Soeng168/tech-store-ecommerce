@@ -118,7 +118,7 @@ const addressData = [
 const Footer = () => {
     return (
         <div className='bg-primary'>
-            <div className='mx-auto max-w-screen-2xl text-white pt-8 md:pt-16 px-8 md:px-0'>
+            <div className='mx-auto max-w-screen-2xl text-white pt-8 md:pt-16 px-8 md:px-8'>
                 <div className='md:flex md:justify-between md:items-center'>
                     <div className='flex flex-col items-center md:items-start'>
                         <h1 className='text-center font-semibold text-xl md:text-2xl lg:text-5xl pb-2 Md:pb-4'>Sign Up To Our Newsletter.</h1>
@@ -136,7 +136,7 @@ const Footer = () => {
                         </button>
                     </div>
                 </div>
-                <div className='py-8 md:flex md:flex-wrap md:gap-24'>
+                <div className='py-8 md:flex md:flex-wrap md:gap-24 '>
 
                     <div className='md:hidden'>
                         <AccordionComponent data={information} />
