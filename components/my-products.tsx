@@ -127,18 +127,18 @@ const Products = () => {
         { title: 'MSI Nightblade', isActive: false },
     ];
 
-    const category =[
+    const category = [
         { id: 1, name: 'MSI Laptops', imageUrl: '/images/products/custome_build.png' },
     ]
 
-    const category1 =[
+    const category1 = [
         { id: 1, name: 'Destops', imageUrl: '/images/products/custome_build.png' },
     ]
 
-    const categorytop =[
+    const categorytop = [
         { id: 1, name: 'Custome Builds', imageUrl: '/images/products/custome_build.png' },
     ]
-    const categorytop1 =[
+    const categorytop1 = [
         { id: 1, name: 'Gaming Monitors', imageUrl: '/images/products/custome_build.png' },
     ]
 
@@ -151,7 +151,7 @@ const Products = () => {
         { src: '/images/logo/brand/6.png', alt: 'Brand 6' },
         { src: '/images/logo/brand/7.png', alt: 'Brand 7' },
     ];
-    
+
     const feedbacks = [
         {
             id: 1,
@@ -200,29 +200,33 @@ const Products = () => {
 
     return (
         <div>
-            <div className='flex items-center justify-center bg-blue-100 py-4'>
-                <img src="/images/logo/zip.png" alt="" />
-                <p className='text-xl'>
-                    <span className='font-semibold text-2xl'>own</span><span className=' text-blue-400 px-2 text-3xl'>|</span> it now, up to 6 months interest free <span className='text-sm underline'>learn more</span>
+            <div className=" m-4 md:m-0 flex gap-1 flex-col md:flex-row items-center justify-center bg-blue-100 py-4">
+                <img src="/images/logo/zip.png" alt="" className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32" />
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+                    <span className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">own</span>
+                    <span className="text-blue-400 px-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">|</span>
+                    it now, up to 6 months interest free
                 </p>
+                <span className="text-sm md:text-base lg:text-base xl:text-sm underline">learn more</span>
             </div>
+
             {/* start top product category */}
-            <MyTopProductCategory products={productstop} categories={categorytop}/>
+            <MyTopProductCategory products={productstop} categories={categorytop} />
             {/* end top product category */}
 
             {/* start  product category */}
-            <MyProductCategory products={products} series={series} categories={category}/>
-            <MyProductCategory products={products} series={series1} categories={category1}/>
-            <MyTopProductCategory products={productstop} categories={categorytop1}/>
+            <MyProductCategory products={products} series={series} categories={category} />
+            <MyProductCategory products={products} series={series1} categories={category1} />
+            <MyTopProductCategory products={productstop} categories={categorytop1} />
             {/* end  product category */}
-            
+
             {/* start brand logo */}
-            <BrandLogos logos={logos}/>
+            <BrandLogos logos={logos} />
             {/* end brand logo */}
 
             {/* start Follow us on Instagram for News, Offers & More */}
 
-            <FeedbackList feedbacks={feedbacks}/>
+            <FeedbackList feedbacks={feedbacks} />
             {/* end Follow us on Instagram for News, Offers & More */}
 
         </div>

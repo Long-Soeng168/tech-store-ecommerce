@@ -38,11 +38,11 @@ const products = [
 const MyNewProduct = () => {
     return (
         <div className=''>
-            <div className='flex justify-between font-semibold pt-8'>
+            <div className='flex justify-between font-semibold pt-8 px-4 md:px-2 lg:px-0'>
                 <h1 className='text-xl'>New Product</h1>
                 <p className='text-[12px] text-blue-500 underline'>See All New Products</p>
             </div>
-            <div>
+            <div className='p-2 md:p-0'>
                 <Carousel
                     opts={{
                         align: "start",
@@ -67,8 +67,8 @@ const MyNewProduct = () => {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className="absolute top-1/2 left-0 bg-gray-300 rounded rounded-r-full text-white border-none transform -translate-y-1/2 z-10" />
-                    <CarouselNext className="absolute top-1/2 right-0 bg-gray-300 rounded rounded-l-full text-white border-none transform -translate-y-1/2 z-10" />
+                    <CarouselPrevious className="hidden md:block absolute top-1/2 left-0 bg-gray-300 rounded rounded-r-full text-white border-none transform -translate-y-1/2 z-10" />
+                    <CarouselNext className="hidden md:block absolute top-1/2 right-0 bg-gray-300 rounded rounded-l-full text-white border-none transform -translate-y-1/2 z-10" />
                 </Carousel>
             </div>
         </div>

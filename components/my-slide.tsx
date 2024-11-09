@@ -22,7 +22,7 @@ const MySlide: React.FC<MySlideProps> = ({ images }) => {
         <Carousel className='relative'>
             <CarouselContent>
                 {images.map((imageSrc, index) => (
-                    <CarouselItem key={index}>
+                    <CarouselItem key={index} className='p-4 md:p-2 lg:p-0'>
                         <CardContent >
                             <Image
                                 src={imageSrc}

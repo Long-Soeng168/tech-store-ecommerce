@@ -12,7 +12,7 @@ interface BrandLogosProps {
 
 const BrandLogos: React.FC<BrandLogosProps> = ({ logos }) => {
     return (
-        <div className="flex flex-wrap gap-16 justify-evenly items-center py-16">
+        <div className="mx-8 md:mx-0 flex flex-wrap gap-y-8 md:gap-x-16 justify-evenly items-center py-16">
             {logos.map((logo, index) => (
                 <img key={index} src={logo.src} alt={logo.alt} width={logo.width || 120} />
             ))}

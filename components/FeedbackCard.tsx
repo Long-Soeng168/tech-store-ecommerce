@@ -23,7 +23,7 @@ const FeedbackCard: React.FC<FeedbackItem> = ({ image, text, date }) => {
 
 const FeedbackList: React.FC<FeedbackListProps> = ({ feedbacks }) => {
     return (
-        <div className="flex justify-start gap-8 flex-wrap">
+        <div className="hidden md:flex justify-start gap-8 flex-wrap">
             {feedbacks.map((feedback, index) => (
                 <FeedbackCard key={feedback.id} {...feedback} />
             ))}
