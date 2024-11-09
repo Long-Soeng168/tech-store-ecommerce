@@ -119,7 +119,7 @@ const Footer = () => {
     return (
         <div className='bg-primary'>
             <div className='mx-auto max-w-screen-2xl text-white pt-8 md:pt-16 px-8 md:px-8'>
-                <div className='md:flex md:justify-between md:items-center'>
+                <header className='md:flex md:justify-between md:items-center'>
                     <div className='flex flex-col items-center md:items-start'>
                         <h1 className='text-center font-semibold text-xl md:text-2xl lg:text-5xl pb-2 Md:pb-4'>Sign Up To Our Newsletter.</h1>
                         <p className='text-gray-300 text-sm md:text-xl lg:text-start'>Be the first to hear about the latest offers.</p>
@@ -135,9 +135,10 @@ const Footer = () => {
                             Subscribe
                         </button>
                     </div>
-                </div>
+                </header>
                 <div className='py-8 md:flex md:flex-wrap md:gap-24 '>
 
+                    {/* start imformation */}
                     <div className='md:hidden'>
                         <AccordionComponent data={information} />
                     </div>
@@ -160,6 +161,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr className='mb-4 mt-2 border-gray-800 md:hidden' />
+                    {/* end imformation */}
+
+                    {/* start pc part */}
                     <div className='md:hidden'>
                         <AccordionComponent data={pc_parts} />
                     </div>
@@ -182,6 +186,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr className='my-4 mt-2 border-gray-800 md:hidden' />
+                    {/* end pc part */}
+
+                    {/* start destop pcs */}
                     <div className='md:hidden'>
                         <AccordionComponent data={desktopPCs} />
                     </div>
@@ -204,6 +211,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr className='my-4 mt-2 border-gray-800 md:hidden' />
+                    {/* end destop pcs */}
+
+                    {/* start laptops */}
                     <div className='md:hidden'>
                         <AccordionComponent data={laptops} />
                     </div>
@@ -226,6 +236,9 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr className='my-4 mt-2 border-gray-800 md:hidden' />
+                    {/* end laptops */}
+
+                    {/* start address */}
                     <div className='md:hidden'>
                         <AccordionAdreesComponent data={addressData} />
                     </div>
@@ -247,6 +260,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr className='my-4 mt-2 border-gray-800 md:hidden' />
+                    {/* end address */}
 
                 </div>
                 <hr className='border border-gray-800' />
