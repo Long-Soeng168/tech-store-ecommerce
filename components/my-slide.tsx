@@ -14,10 +14,11 @@ import Image from 'next/image'
 
 interface MySlideProps {
     images: string[];
+    className: string;
 }
 
 
-const MySlide: React.FC<MySlideProps> = ({ images }) => {
+const MySlide: React.FC<MySlideProps> = ({ images,className }) => {
     return (
         <Carousel className='relative'>
             <CarouselContent>
@@ -27,7 +28,7 @@ const MySlide: React.FC<MySlideProps> = ({ images }) => {
                             <Image
                                 src={imageSrc}
                                 alt={`Slide image ${index + 1}`}
-                                className='aspect-[26/6] w-full object-cover'
+                                className={className}
                                 width={900}
                                 height={500}
                                 priority={index === 0}

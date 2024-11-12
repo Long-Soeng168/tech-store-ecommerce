@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       {/* start slide */}
-      <MySlide images={[
+      <MySlide 
+      className='aspect-[26/6] w-full object-cover'
+       images={[
         "/images/slides/slide1.png",
         "/images/slides/slide2.png",
         "/images/slides/slide3.png",
@@ -23,7 +25,7 @@ export default function Home() {
       {/* end products */}
 
       {/* start service */}
-      <MyService/>
+      {/* <MyService/> */}
       {/* end service */}
 
     </>
