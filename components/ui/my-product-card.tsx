@@ -13,7 +13,7 @@ interface MyProductCardProps {
 
 const MyProductCard: React.FC<MyProductCardProps> = ({ instock, image, rating, reviews, name, price, oldPrice }) => {
     return (
-        <div>
+        <div className='min-w-64 px-2'>
             {/* Stock Status */}
             <div className={`flex gap-2 text-sm ${instock ? 'text-green-500' : 'text-red-500'} items-center justify-start pb-2`}>
                 <Verified className='' size={16} />
@@ -24,11 +24,11 @@ const MyProductCard: React.FC<MyProductCardProps> = ({ instock, image, rating, r
             <img
                 src={image}
                 alt={`Product`}
-                className="w-32 h-32 object-cover ml-4"
+                className="aspect-square object-cover mx-auto py-4"
             />
 
             {/* Product Rating */}
-            <div className='flex gap-2 items-center py-4'>
+            <div className='flex gap-2 items-center py-2'>
                 <div className="flex">
                     {[...Array(5)].map((_, index) => (
                         <Star
@@ -43,7 +43,9 @@ const MyProductCard: React.FC<MyProductCardProps> = ({ instock, image, rating, r
             </div>
 
             {/* Product Name */}
-            <p className='truncate-3-lines'>{name}</p>
+            <p className="truncate-multiline text-xl font-semibold">
+                {name}
+            </p>
 
             {/* Product Price */}
             <div className='py-4'>

@@ -16,7 +16,7 @@ const Products = () => {
             oldPrice: 599.00,
             rating: 3,
             reviews: 4,
-            instock: "In Stock",
+            instock: true,
         },
         {
             id: 2,
@@ -26,7 +26,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "Out Stock",
+            instock: false,
         },
         {
             id: 3,
@@ -36,7 +36,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: true,
         },
         {
             id: 4,
@@ -46,7 +46,100 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: true,
+        },
+        {
+            id: 5,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 6,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 7,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: true,
+        },
+        // Add more product objects as needed
+    ];
+    const productstop1 = [
+        {
+            id: 1,
+            name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
+            imageUrl: "/images/new-products/1.png",
+            price: 499.00,
+            oldPrice: 599.00,
+            rating: 3,
+            reviews: 4,
+            instock: false,
+        },
+        {
+            id: 2,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/2.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 3,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/3.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: true,
+        },
+        {
+            id: 4,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: true,
+        },
+        {
+            id: 5,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 6,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: true,
         },
         // Add more product objects as needed
     ];
@@ -59,7 +152,7 @@ const Products = () => {
             oldPrice: 599.00,
             rating: 3,
             reviews: 4,
-            instock: "In Stock",
+            instock: true,
         },
         {
             id: 2,
@@ -69,7 +162,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "Out Stock",
+            instock: false,
         },
         {
             id: 3,
@@ -79,7 +172,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: true,
         },
         {
             id: 4,
@@ -89,7 +182,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: false,
         },
         {
             id: 5,
@@ -99,7 +192,7 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: true,
         },
         {
             id: 6,
@@ -109,8 +202,82 @@ const Products = () => {
             oldPrice: 50,
             rating: 5,
             reviews: 10,
-            instock: "In Stock",
+            instock: true,
         },
+        // Add more product objects as needed
+    ];
+    const products1 = [
+        {
+            id: 1,
+            name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
+            imageUrl: "/images/new-products/2.png",
+            price: 499.00,
+            oldPrice: 599.00,
+            rating: 3,
+            reviews: 4,
+            instock: true,
+        },
+        {
+            id: 2,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/4.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 3,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/3.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: true,
+        },
+        {
+            id: 4,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 5,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 6,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        {
+            id: 7,
+            name: "High Performance Laptop - Intel Core i7",
+            imageUrl: "/images/new-products/1.png",
+            price: 899.00,
+            oldPrice: 50,
+            rating: 5,
+            reviews: 10,
+            instock: false,
+        },
+        
         // Add more product objects as needed
     ];
 
@@ -216,12 +383,14 @@ const Products = () => {
 
             {/* start  product category */}
             <MyProductCategory products={products} series={series} categories={category} />
-            <MyProductCategory products={products} series={series1} categories={category1} />
-            <MyTopProductCategory products={productstop} categories={categorytop1} />
+            <MyProductCategory products={products1} series={series1} categories={category1} />
+            <MyTopProductCategory products={productstop1} categories={categorytop1} />
             {/* end  product category */}
 
             {/* start brand logo */}
-            <BrandLogos logos={logos} />
+            <BrandLogos logos={logos}
+                className='mx-8 md:mx-0 flex flex-wrap gap-y-8 md:gap-x-16 justify-evenly items-center py-16'
+            />
             {/* end brand logo */}
 
             {/* start Follow us on Instagram for News, Offers & More */}

@@ -52,17 +52,17 @@ const MyNewProduct = () => {
                     <CarouselContent>
                         {products.map((product) => (
                             <CarouselItem key={product.id} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6">
-                                <CardContent className="flex flex-col p-6">
-                                <MyProductCard
-                                            key={product.id} // Use a unique key here
-                                            instock={product.instock}
-                                            image={product.image}
-                                            rating={product.rating}
-                                            reviews={product.reviews}
-                                            name={product.name}
-                                            price={product.price}
-                                            oldPrice={product.oldPrice}
-                                        />
+                                <CardContent className="flex flex-col pr-6">
+                                    <MyProductCard
+                                        // key={product.id} // Use a unique key here
+                                        instock={product.instock}
+                                        image={product.image}
+                                        rating={product.rating}
+                                        reviews={product.reviews}
+                                        name={product.name}
+                                        price={product.price}
+                                        oldPrice={product.oldPrice}
+                                    />
                                 </CardContent>
                             </CarouselItem>
                         ))}
