@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet"
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 
 const MyHeader = () => {
@@ -20,7 +21,7 @@ const MyHeader = () => {
                     <div className="hidden lg:inline-block">
                         Visit our showroom in 1234 Street Adress City Address, 1234
                         <span className="font-semibold text-white pl-2 underline hover:cursor-pointer">
-                            Contact Us
+                            <Link href="/contact-us">Contact Us</Link>
                         </span>
                     </div>
                     <div className="flex gap-4 font-semibold text-white items-center">
@@ -52,8 +53,10 @@ const MyHeader = () => {
                                     </ul>
                                 </SheetContent>
                             </Sheet>
-                            <img src="/images/logo/wlogo.png" alt="" className="pl-8 md:hidden hover:cursor-pointer" />
-                            <img src="/images/logo/bluelogo.png" alt="" className="w-20 pl-4 hover:cursor-pointer hidden md:block" />
+                            <Link href="/">
+                                <img src="/images/logo/wlogo.png" alt="" className="pl-8 md:hidden hover:cursor-pointer" />
+                                <img src="/images/logo/bluelogo.png" alt="" className="w-20 pl-4 hover:cursor-pointer hidden md:block" />
+                            </Link>
                         </div>
                         <div className="hidden lg:flex flex-1 justify-evenly">
                             <ul className="flex gap-8 font-semibold">

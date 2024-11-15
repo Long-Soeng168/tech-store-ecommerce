@@ -2,7 +2,7 @@ import React from 'react'
 
 const MyService = () => {
     return (
-        <div className="mx-8 flex flex-wrap items-center justify-center gap-x-10 md:gap-16 lg:gap-28 py-4 px-2">
+        <div className="bg-blue-50 px-8 flex flex-wrap items-center justify-center gap-x-10 md:gap-16 lg:gap-28 py-4 ">
             {[
                 {
                     imgSrc: "/icons/service/support.png",
