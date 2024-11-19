@@ -124,7 +124,7 @@ const products = [
 
 
 
-const Page: React.FC<AccordionContentProps> = () => {
+const Page = () => {
 
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
@@ -331,7 +331,7 @@ const Page: React.FC<AccordionContentProps> = () => {
                     {/* start list products */}
                     {products.map((product) => (
 
-                        <div className="hover:border hover:border-gray-100 hover:rounded-lg hover:shadow-lg p-8 flex gap-6 justify-between">
+                        <div key={product.id} className="hover:border hover:border-gray-100 hover:rounded-lg hover:shadow-lg p-8 flex gap-6 justify-between">
                             <div className='flex gap-8'>
                                 {/* Left Side: Product Image */}
                                 <div className="flex-shrink-0 aspect-square">
