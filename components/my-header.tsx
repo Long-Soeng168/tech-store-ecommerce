@@ -72,9 +72,11 @@ const MyHeader = () => {
                             <Button size='icon' variant='ghost' className="hidden md:block " >
                                 <Search className="hover:cursor-pointer" />
                             </Button>
-                            <Button size='icon' variant='ghost' >
-                                <ShoppingCart className="hover:cursor-pointer text-white md:text-primary" />
-                            </Button>
+                            <Link href="/shopping-card">
+                                <Button size='icon' variant='ghost' >
+                                    <ShoppingCart className="hover:cursor-pointer text-white md:text-primary" />
+                                </Button>
+                            </Link>
                             <Button size='icon' variant='ghost' >
                                 <User2Icon className="hover:cursor-pointer text-white md:text-primary" />
                             </Button>
