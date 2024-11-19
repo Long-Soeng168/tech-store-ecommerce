@@ -124,7 +124,7 @@ const products = [
 
 
 
-const Page: React.FC<AccordionContentProps> = () => {
+const Page = () => {
 
     const [selectedColor, setSelectedColor] = useState<string | null>(null);
 
