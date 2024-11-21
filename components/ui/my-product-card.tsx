@@ -3,7 +3,7 @@ import React from 'react';
 
 interface MyProductCardProps {
     instock: boolean;
-    image: string;
+    imageUrl: string;
     rating: number;
     reviews: number;
     name: string;
@@ -11,18 +11,26 @@ interface MyProductCardProps {
     oldPrice?: number;
 }
 
-const MyProductCard: React.FC<MyProductCardProps> = ({ instock, image, rating, reviews, name, price, oldPrice }) => {
+const MyProductCard = (
+    {
+        product
+    }
+    :
+    {
+        product: MyProductCardProps
+    }
+) => {
     return (
         <div className='min-w-64 px-2'>
             {/* Stock Status */}
-            <div className={`flex gap-2 text-sm ${instock ? 'text-green-500' : 'text-red-500'} items-center justify-start pb-2`}>
+            <div className={`flex gap-2 text-sm ${product.instock ? 'text-green-500' : 'text-red-500'} items-center justify-start pb-2`}>
                 <Verified className='' size={16} />
-                <p>{instock ? 'In Stock' : 'Out of Stock'}</p>
+                <p>{product.instock ? 'In Stock' : 'Out of Stock'}</p>
             </div>
 
             {/* Product Image */}
             <img
-                src={image}
+                src={product.imageUrl}
                 alt={`Product`}
                 className="aspect-square object-cover mx-auto py-4"
             />
@@ -33,24 +41,24 @@ const MyProductCard: React.FC<MyProductCardProps> = ({ instock, image, rating, r
                     {[...Array(5)].map((_, index) => (
                         <Star
                             key={index}
-                            fill={index < rating ? "yellow" : "gray"}
+                            fill={index < product.rating ? "yellow" : "gray"}
                             strokeWidth={0}
                             size={16}
                         />
                     ))}
                 </div>
-                <p className='text-gray-400'>Reviews ({reviews})</p>
+                <p className='text-gray-400'>Reviews ({product.reviews})</p>
             </div>
 
             {/* Product Name */}
             <p className="truncate-multiline text-xl font-semibold">
-                {name}
+                {product.name}
             </p>
 
             {/* Product Price */}
             <div className='py-4'>
-                {oldPrice && <p className='text-gray-400 line-through'>${oldPrice.toFixed(2)}</p>}
-                <p className='text-2xl font-semibold'>${price.toFixed(2)}</p>
+                {product.oldPrice && <p className='text-gray-400 line-through'>${product.oldPrice.toFixed(2)}</p>}
+                <p className='text-2xl font-semibold'>${product.price.toFixed(2)}</p>
             </div>
         </div>
     );

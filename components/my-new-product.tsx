@@ -1,6 +1,5 @@
 import React from 'react'
-import { Star, StarHalf, Verified } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card"
+import { CardContent } from "@/components/ui/card"
 import {
     Carousel,
     CarouselContent,
@@ -9,13 +8,14 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import MyProductCard from './ui/my-product-card';
+import Link from 'next/link';
 
 
 const products = [
     {
         id: 1,
         instock: true,
-        image: '/images/new-products/1.png',
+        imageUrl: '/images/new-products/1.png',
         rating: 4,
         reviews: 4,
         name: 'EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One...',
@@ -25,7 +25,7 @@ const products = [
     {
         id: 2,
         instock: true,
-        image: '/images/new-products/2.png',
+        imageUrl: '/images/new-products/2.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -34,7 +34,7 @@ const products = [
     {
         id: 3,
         instock: false,
-        image: '/images/new-products/3.png',
+        imageUrl: '/images/new-products/3.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -43,7 +43,7 @@ const products = [
     {
         id: 4,
         instock: true,
-        image: '/images/new-products/4.png',
+        imageUrl: '/images/new-products/4.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -52,7 +52,7 @@ const products = [
     {
         id: 5,
         instock: false,
-        image: '/images/new-products/5.png',
+        imageUrl: '/images/new-products/5.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -61,7 +61,7 @@ const products = [
     {
         id: 6,
         instock: true,
-        image: '/images/new-products/6.png',
+        imageUrl: '/images/new-products/6.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -70,7 +70,7 @@ const products = [
     {
         id: 7,
         instock: true,
-        image: '/images/new-products/7.png',
+        imageUrl: '/images/new-products/7.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -79,7 +79,7 @@ const products = [
     {
         id: 7,
         instock: false,
-        image: '/images/new-products/8.png',
+        imageUrl: '/images/new-products/8.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -88,7 +88,7 @@ const products = [
     {
         id: 7,
         instock: false,
-        image: '/images/new-products/9.png',
+        imageUrl: '/images/new-products/9.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -97,7 +97,7 @@ const products = [
     {
         id: 10,
         instock: false,
-        image: '/images/new-products/10.png',
+        imageUrl: '/images/new-products/10.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -106,7 +106,7 @@ const products = [
     {
         id: 11,
         instock: false,
-        image: '/images/new-products/11.png',
+        imageUrl: '/images/new-products/11.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -121,7 +121,9 @@ const MyNewProduct = () => {
         <div className=''>
             <div className='flex justify-between font-semibold pt-8 px-4 md:px-2 lg:px-0'>
                 <h1 className='text-xl'>New Product</h1>
-                <p className='text-[12px] text-blue-500 underline'>See All New Products</p>
+                <Link href='/products'>
+                    <p className='text-[12px] text-blue-500 underline'>See All New Products</p>
+                </Link>
             </div>
             <div className='p-2 md:p-0'>
                 <Carousel
@@ -136,13 +138,7 @@ const MyNewProduct = () => {
                                 <CardContent className="flex flex-col pr-6">
                                     <MyProductCard
                                         // key={product.id} // Use a unique key here
-                                        instock={product.instock}
-                                        image={product.image}
-                                        rating={product.rating}
-                                        reviews={product.reviews}
-                                        name={product.name}
-                                        price={product.price}
-                                        oldPrice={product.oldPrice}
+                                        product={product}
                                     />
                                 </CardContent>
                             </CarouselItem>

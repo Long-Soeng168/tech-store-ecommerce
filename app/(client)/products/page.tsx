@@ -79,7 +79,7 @@ const products = [
     {
         id: 1,
         name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
-        imageUrl: "/images/new-products/2.png",
+        image: "/images/new-products/2.png",
         price: 499.00,
         oldPrice: 599.00,
         rating: 3,
@@ -89,7 +89,7 @@ const products = [
     {
         id: 2,
         name: "High Performance Laptop - Intel Core i7",
-        imageUrl: "/images/new-products/4.png",
+        image: "/images/new-products/4.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -99,7 +99,7 @@ const products = [
     {
         id: 3,
         name: "High Performance Laptop - Intel Core i7",
-        imageUrl: "/images/new-products/3.png",
+        image: "/images/new-products/3.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -109,7 +109,7 @@ const products = [
     {
         id: 4,
         name: "High Performance Laptop - Intel Core i7",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -119,7 +119,7 @@ const products = [
     {
         id: 5,
         name: "High Performance Laptop - Intel Core i7",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -129,7 +129,7 @@ const products = [
     {
         id: 6,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -139,7 +139,7 @@ const products = [
     {
         id: 7,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -149,7 +149,7 @@ const products = [
     {
         id: 8,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -159,7 +159,7 @@ const products = [
     {
         id: 9,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -169,7 +169,7 @@ const products = [
     {
         id: 10,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -179,7 +179,7 @@ const products = [
     {
         id: 11,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -189,7 +189,7 @@ const products = [
     {
         id: 12,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -199,7 +199,7 @@ const products = [
     {
         id: 13,
         name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        imageUrl: "/images/new-products/1.png",
+        image: "/images/new-products/1.png",
         price: 899.00,
         oldPrice: 50,
         rating: 5,
@@ -424,13 +424,7 @@ const Page = () => {
                         {products.map((product) => (
                             <MyProductCard
                                 key={product.id}
-                                image={product.imageUrl}
-                                instock={product.instock}
-                                name={product.name}
-                                price={product.price}
-                                rating={product.rating}
-                                reviews={product.reviews}
-                                oldPrice={product.oldPrice}
+                                product={product}
                             />
                         ))}
                     </div>

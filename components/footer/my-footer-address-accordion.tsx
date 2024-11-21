@@ -1,8 +1,6 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+
 // components/AccordionAdreesComponent.tsx
-
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@radix-ui/react-accordion'; // Import Radix UI components
-
-// Define the structure of the data
 interface Detail {
   label: string;
   content: React.ReactNode; // Ensure content can be JSX
