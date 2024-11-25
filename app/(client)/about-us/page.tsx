@@ -9,6 +9,8 @@ const page = () => {
                 <p>Home  ›  About Us</p>
                 <h1 className='text-3xl font-semibold my-8'>About Us</h1>
             </div>
+
+            {/* start saction 1 */}
             <div className='bg-black text-white '>
                 <div className='max-w-screen-2xl mx-auto flex items-center justify-between px-24 py-16'>
                     <div className='w-1/2 pr-16'>
@@ -29,6 +31,9 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            {/* end saction 1 */}
+
+            {/* start saction 2 */}
             <div className='bg-white text-black '>
                 <div className='max-w-screen-2xl mx-auto flex items-center justify-between py-16'>
                     <div className="w-[500px] h-[500px] relative">
@@ -60,6 +65,9 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            {/* end saction 2 */}
+
+            {/* start saction 3 */}
             <div className='bg-black text-white '>
                 <div className='max-w-screen-2xl mx-auto flex items-center justify-between py-16 px-24'>
                     <div className='w-1/2'>
@@ -84,6 +92,9 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            {/* end saction 3 */}
+
+            {/* start saction 4 */}
             <div className='bg-white text-black '>
                 <div className='max-w-screen-2xl mx-auto flex items-center justify-between py-16'>
                     <div className="w-[500px] h-[500px] relative">
@@ -108,6 +119,9 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            {/* end saction 4 */}
+
+            {/* start saction 5 */}
             <div className='bg-black text-white'>
                 <div className='max-w-screen-2xl mx-auto flex items-center justify-between py-16 px-24'>
                     <div className='w-1/2'>
@@ -132,6 +146,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
+            {/* end saction 5 */}
         </div>
     )
 }
