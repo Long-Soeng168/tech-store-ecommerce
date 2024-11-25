@@ -15,7 +15,7 @@ const ClientLayout = (
     return (
         <>
             <MyHeader />
-            <main className='max-w-screen-2xl mx-auto'>
+            <main className=''>
                 {children}
             </main>
             <MyService/>

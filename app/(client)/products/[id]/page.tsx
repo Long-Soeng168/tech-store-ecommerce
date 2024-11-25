@@ -134,7 +134,7 @@ const Page = () => {
 
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             {/* slide product */}
             <MySlide
                 className='aspect-[26/2] w-full object-cover'

@@ -4,7 +4,7 @@ import React from 'react'
 const page = () => {
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             <p>Home  ›  Login</p>
             <h1 className='text-3xl font-semibold my-8'>Customer Login</h1>
             <div className='flex justify-center gap-8 min-w-full mb-8'>

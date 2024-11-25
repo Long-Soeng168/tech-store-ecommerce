@@ -274,7 +274,7 @@ const page = () => {
 
 
     return (
-        <div>
+        <div className="max-w-screen-2xl mx-auto">
             <p>Home  ›  Shopping Card</p>
             <h1 className='text-3xl font-semibold my-8'>Shopping Cart</h1>
             <div className='flex gap-16 my-20'>
