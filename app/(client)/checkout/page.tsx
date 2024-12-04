@@ -299,7 +299,7 @@ const page = () => {
     const [valueCountry, setValueCountry] = React.useState("")
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             <p>Home  ›  Shopping Cart  ›  Checkout Process</p>
             <div className='flex gap-8 my-20'>
                 <div className='w-11/12'>
