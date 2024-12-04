@@ -68,9 +68,11 @@ const MyHeader = () => {
                                 <li className="hover:cursor-pointer">Networking Devices</li>
                             </ul>
                         </div>
-                        <div className="flex gap-4">
-                            <Button size='icon' variant='ghost' className="hidden md:block " >
-                                <Search className="hover:cursor-pointer" />
+                        <div className="flex gap-4 shrink-0">
+                            <Button size='icon' variant='ghost' >
+                                <Link href="/shopping-card">
+                                    <Search className="hover:cursor-pointer text-white md:text-primary" />
+                                </Link>
                             </Button>
                             <Link href="/shopping-card">
                                 <Button size='icon' variant='ghost' >
