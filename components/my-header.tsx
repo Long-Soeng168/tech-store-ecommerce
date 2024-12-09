@@ -1,4 +1,13 @@
-import { FormInput, Menu, Search, SearchCheckIcon, ShoppingCart, User2Icon } from "lucide-react";
+import {
+    AlignLeft,
+    Facebook,
+    FormInput,
+    Menu,
+    Search,
+    SearchCheckIcon,
+    ShoppingCart,
+    User2Icon,
+} from "lucide-react";
 import {
     Sheet,
     SheetContent,
@@ -6,98 +15,203 @@ import {
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import { MyCategoriesNav } from "./my-categories-nav";
 
 const MyHeader = () => {
     return (
         <>
             <nav className="bg-primary text-white px-4">
-                <div className="text-sm flex justify-between items-center py-4 max-w-screen-2xl mx-auto  text-gray-400">
-                    <div className="border rounded-full md:border-none px-4 py-1">Mon-Thu: <span className="font-semibold text-white hover:cursor-pointer">9:00-5:30 PM</span></div>
+                <div className="text-sm flex py-4 justify-between items-center max-w-screen-xl mx-auto  text-gray-400">
+                    <div className="flex gap-2 items-center">
+                        {/* <div className="block">
+                            <Image
+                                width={65}
+                                height={65}
+                                src="/images/logo/logo.png"
+                                alt=""
+                                className=" hover:cursor-pointer"
+                            />
+                        </div> */}
+                        <div className="border hidden sm:block rounded-full px-4 py-1">
+                            Mon-Thu:{" "}
+                            <span className="font-semibold text-white hover:cursor-pointer">
+                                9:00-5:30 PM
+                            </span>
+                        </div>
+                    </div>
                     <div className="hidden lg:inline-block">
-                        Visit our showroom in 1234 Street Adress City Address, 1234
+                        1234 Street Adress City Address, 1234
                         <span className="font-semibold text-white pl-2 underline hover:cursor-pointer">
                             <Link href="/contact-us">Contact Us</Link>
                         </span>
                     </div>
                     <div className="flex gap-4 font-semibold text-white items-center">
-                        <p>Call Us:(00)1234 5678</p>
-                        <Image width={35} height={35} src="/icons/fb.png" alt="" className="hidden md:block hover:cursor-pointer" />
-                        <Image width={35} height={35} src="/icons/ig.png" alt="" className="hidden md:block hover:cursor-pointer" />
+                        <p>Call Us : 012 34 56 78</p>
+                        <div
+                            className="flex gap-2"
+                        >
+                            <Image
+                                width={32}
+                                height={32}
+                                src="/icons/links/facebook.png"
+                                alt=""
+                                className=" hover:cursor-pointer"
+                            />
+                            <Image
+                                width={32}
+                                height={32}
+                                src="/icons/links/messenger.png"
+                                alt=""
+                                className=" hover:cursor-pointer"
+                            />
+                            <Image
+                                width={32}
+                                height={32}
+                                src="/icons/links/telegram.png"
+                                alt=""
+                                className=" hover:cursor-pointer"
+                            />
+                        </div>
                     </div>
                 </div>
             </nav>
-            <div className="bg-blue-600 md:bg-background">
-                <header className="">
-                    <div className="flex px-4 md:px-2 lg:px-0 max-w-screen-2xl items-center justify-between mx-auto py-4">
+            <div >
+                <header>
+                    <div className="flex px-4 md:px-2 lg:px-0 max-w-screen-xl items-center justify-between mx-auto">
                         <div className="flex items-center">
                             <Sheet>
-                                <SheetTrigger>
-                                    <Menu className="size-8 text-white md:text-primary lg:hidden" />
-                                </SheetTrigger>
-                                <SheetContent side="left" className="bg-gray-100 p-6 rounded-lg shadow-md w-64">
-                                    <SheetHeader className="border-b pb-4 mb-4">
-                                        <SheetTitle className="text-2xl font-bold text-gray-700">Menu</SheetTitle>
+                                <div className="flex items-center gap-2">
+                                    <SheetTrigger>
+                                        <Menu className="size-8 text-primary lg:hidden" />
+                                    </SheetTrigger>
+                                    <Link href="/">
+                                        <Image
+                                            width={65}
+                                            height={65}
+                                            src="/images/logo/logo.png"
+                                            alt=""
+                                            className="cursor-pointer -translate-y-1"
+                                        />
+                                    </Link>
+                                </div>
+                                <SheetContent
+                                    side="left"
+                                    className="bg-gray-100 p-6 shadow-md w-64"
+                                >
+                                    <SheetHeader className=" pb-4 mb-4">
+                                        <SheetTitle className="text-2xl font-bold text-gray-700">
+                                            Menu
+                                        </SheetTitle>
                                     </SheetHeader>
                                     <ul className="flex flex-col gap-6 font-semibold text-gray-600">
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Laptops</li>
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Desktops</li>
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Networking Devices</li>
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Laptops</li>
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Desktops</li>
-                                        <li className="hover:cursor-pointer hover:text-blue-500 transition-colors duration-200">Networking Devices</li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Categories
+                                        </li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Desktops
+                                        </li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Laptops
+                                        </li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Networking Devices
+                                        </li>
+                                        <hr />
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Blogs
+                                        </li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            Contact
+                                        </li>
+                                        <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
+                                            About
+                                        </li>
                                     </ul>
                                 </SheetContent>
                             </Sheet>
-                            <Link href="/">
-                                <img src="/images/logo/wlogo.png" alt="" className="pl-8 md:hidden hover:cursor-pointer" />
-                                <img src="/images/logo/bluelogo.png" alt="" className="w-20 pl-4 hover:cursor-pointer hidden md:block" />
-                            </Link>
+
                         </div>
                         <div className="hidden lg:flex flex-1 justify-evenly">
-                            <ul className="flex gap-8 font-semibold">
-                                <li className="hover:cursor-pointer">Laptops</li>
-                                <li className="hover:cursor-pointer">Desktops</li>
-                                <li className="hover:cursor-pointer">Networking Devices</li>
-                                <li className="hover:cursor-pointer">Laptops</li>
-                                <li className="hover:cursor-pointer">Desktops</li>
-                                <li className="hover:cursor-pointer">Networking Devices</li>
+                            <ul className="flex gap-2 font-semibold items-center">
+                                <li>
+                                    <MyCategoriesNav />
+                                </li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Laptops
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Desktop
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Networking Device
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
+                                <li className="border border-primary/5 h-6 bg-primary/50"></li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Blogs
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Contact
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        About
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </p>
+                                </li>
                             </ul>
                         </div>
                         <div className="flex gap-4 shrink-0">
-                            <Button size='icon' variant='ghost' >
-                                <Link href="/shopping-card">
-                                    <Search className="hover:cursor-pointer text-white md:text-primary" />
-                                </Link>
-                            </Button>
                             <Link href="/shopping-card">
-                                <Button size='icon' variant='ghost' >
-                                    <ShoppingCart className="hover:cursor-pointer text-white md:text-primary" />
+                                <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-foreground text-primary hover:text-white">
+                                    <Search />
                                 </Button>
                             </Link>
-                            <Button size='icon' variant='ghost' >
-                                <User2Icon className="hover:cursor-pointer text-white md:text-primary" />
+                            <Link href="/shopping-card">
+                                <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-foreground text-primary hover:text-white">
+                                    <ShoppingCart />
+                                </Button>
+                            </Link>
+                            <Button size="icon" variant="ghost" className="hover:bg-primary hover:text-foreground text-primary hover:text-white">
+                                <User2Icon />
                             </Button>
                         </div>
                     </div>
-                    <div className="md:hidden mx-4 mb-2">
+                    <div className="md:hidden mx-4 mb-3">
                         <div className="relative flex items-center">
                             <span className="absolute left-3 text-gray-400">
                                 <img src="/icons/search.png" alt="" />
                             </span>
-                            <input type="text" placeholder="Search" className="pl-10 border rounded-full px-4 w-full py-2 text-gray-800 placeholder-gray-400" />
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                className="pl-10 border border-primary rounded-full px-4 w-full py-2 text-gray-800 placeholder-gray-400"
+                            />
                         </div>
-
                     </div>
                 </header>
-                <hr />
+                {/* <hr /> */}
             </div>
         </>
-    )
-}
+    );
+};
 
-export default MyHeader
+export default MyHeader;

@@ -12,22 +12,22 @@ import {
 } from "@/components/ui/card"
 import Image from 'next/image'
 
-interface MySlideProps {
+interface MyMiddleSlideProps {
     images: string[];
 }
 
 
-const MySlide: React.FC<MySlideProps> = ({ images }) => {
+const MyMiddleSlide: React.FC<MyMiddleSlideProps> = ({ images }) => {
     return (
-        <Carousel className='relative px-2'>
+        <Carousel className='relative px-2 mt-10'>
             <CarouselContent>
                 {images.map((imageSrc, index) => (
-                    <CarouselItem key={index} >
+                    <CarouselItem key={index} className='pl-2  hover:scale-95 cursor-pointer  transition-all duration-500 lg:pl-4 basis-1/2 lg:basis-1/3'>
                         <CardContent >
                             <Image
                                 src={imageSrc}
                                 alt=""
-                                className="aspect-[26/6] w-full object-cover"
+                                className="aspect-video w-full object-cover"
                                 width={900}
                                 height={500}
                                 priority={index === 0}
@@ -42,4 +42,4 @@ const MySlide: React.FC<MySlideProps> = ({ images }) => {
     )
 }
 
-export default MySlide
+export default MyMiddleSlide

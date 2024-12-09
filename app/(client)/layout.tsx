@@ -11,10 +11,12 @@ const ClientLayout: React.FC<ChildrenType> = ({ children }) => {
     return (
         <>
             <MyHeader />
-            <main className=''>
+            <main>
                 {children}
             </main>
-            <MyService />
+
+            {/* <MyService /> */}
+            {/* <MyFeatureCards /> */}
             <Footer />
         </>
     )
