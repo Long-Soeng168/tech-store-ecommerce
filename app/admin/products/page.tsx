@@ -8,7 +8,7 @@ type Product = {
     name: string;
     description: string;
     price: number;
-    imageUrl: string;
+    image: string;
 };
 
 export default function Products() {
@@ -55,7 +55,7 @@ export default function Products() {
                 {products.map((product) => (
                     <div key={product.id} className="product-card bg-white shadow-lg rounded-lg overflow-hidden p-4 flex flex-col">
                         <img
-                            src={product.imageUrl}
+                            src={product.image}
                             alt={product.name}
                             className="w-full h-48 object-cover rounded-lg mb-4"
                         />

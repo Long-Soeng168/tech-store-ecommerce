@@ -75,7 +75,7 @@ const page = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
-                <h2 className="text-2xl font-bold mb-6 text-gray-700">Submit Product</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-700">New Product</h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Product Name */}
@@ -144,7 +144,7 @@ const page = () => {
                             className={`w-full ${loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
                                 } text-white py-2 px-4 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-500`}
                         >
-                            {loading ? "Submitting..." : "Submit Product"}
+                            {loading ? "Submitting..." : "New Product"}
                         </button>
                     </div>
                 </form>
