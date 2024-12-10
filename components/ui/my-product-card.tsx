@@ -22,9 +22,7 @@ const MyProductCard = (
         }
 ) => {
     return (
-        <div>
-
-
+        <div className='flex flex-col'>
             {/* Product Image */}
             <Image
                 width={600}

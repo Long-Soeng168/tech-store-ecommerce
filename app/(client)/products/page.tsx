@@ -78,135 +78,105 @@ const logos = [
 const products = [
     {
         id: 1,
-        name: "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One",
-        image: "/images/new-products/2.png",
+        instock: true,
+        imageUrl: '/images/new-products/1.png',
+        rating: 4,
+        reviews: 4,
+        name: 'EX DISPLAY: MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-One...',
         price: 499.00,
         oldPrice: 599.00,
-        rating: 3,
-        reviews: 4,
-        instock: true,
     },
     {
         id: 2,
-        name: "High Performance Laptop - Intel Core i7",
-        image: "/images/new-products/4.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: false,
+        instock: true,
+        imageUrl: '/images/new-products/2.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 3,
-        name: "High Performance Laptop - Intel Core i7",
-        image: "/images/new-products/3.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
+        instock: false,
+        imageUrl: '/images/new-products/3.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 4,
-        name: "High Performance Laptop - Intel Core i7",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: false,
+        instock: true,
+        imageUrl: '/images/new-products/4.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 5,
-        name: "High Performance Laptop - Intel Core i7",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
+        instock: false,
+        imageUrl: '/images/new-products/5.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 6,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
         instock: true,
+        imageUrl: '/images/new-products/6.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 7,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
         instock: true,
+        imageUrl: '/images/new-products/7.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 8,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
         instock: false,
+        imageUrl: '/images/new-products/8.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 9,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
+        instock: false,
+        imageUrl: '/images/new-products/9.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 10,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
+        instock: false,
+        imageUrl: '/images/new-products/10.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
     {
         id: 11,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
         instock: false,
+        imageUrl: '/images/new-products/11.png',
+        rating: 3,
+        reviews: 8,
+        name: 'Gaming Laptop MSI Raider GE76',
+        price: 1299.00,
     },
-    {
-        id: 12,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
-    },
-    {
-        id: 13,
-        name: "High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7  High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 High Performance Laptop - Intel Core i7 ",
-        image: "/images/new-products/1.png",
-        price: 899.00,
-        oldPrice: 50,
-        rating: 5,
-        reviews: 10,
-        instock: true,
-    },
-    // Add more product objects as needed
+    // Add more product objects here
 ];
 
 
@@ -227,7 +197,6 @@ const Page = () => {
         <div className='max-w-screen-xl mx-auto'>
             {/* slide product */}
             <MySlide
-                className='aspect-[26/2] w-full object-cover'
                 images={[
                     "/images/slides/slide1.png",
                     "/images/slides/slide2.png",
@@ -420,7 +389,7 @@ const Page = () => {
                 {/* start right side */}
                 <div className='flex-1 pl-4'>
                     {/* start list products */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-5">
                         {products.map((product) => (
                             <MyProductCard
                                 key={product.id}
@@ -458,27 +427,6 @@ const Page = () => {
                         </Pagination>
                     </div>
                     {/* end pagination */}
-
-                    <div className='flex flex-col items-center'>
-                        <div className="relative mx-auto">
-                            <p className="overflow-hidden relative text-gray-700 p-4">
-                                MSI has unveiled the Prestige Series line of business-class and gaming notebooks. Tuned for color accuracy, the Prestige Series also leverages True Color Technology, which allows users to adjust the display profile to best fit their computing needs.
-
-                                There are six different screen profiles, which are tuned for gaming, reducing eye fatigue, sRGB color accuracy, increasing clarity for words and lines, reducing harmful blue light, and optimizing contrast for watching movies.
-
-                                Given the various display profiles and discrete graphics chip, the Prestige Series notebooks can be used for various design work as well as for office tasks given that the screen can be adjusted for better clarity, color accuracy, or for eye strain reduction. Users working with video or 3D rendering will appreciate the "movie mode" for which contrast is increased.
-
-                                Home users or students can benefit from the "anti-blue" and the "office mode" options, both of which are designed to reduce eye strain. This is helpful when working on the computer for extended periods of time. Additionally, in their down time, students can also use the "gamer mode" to increase the screen brightness.
-                            </p>
-                            <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-white to-transparent"></div>
-                        </div>
-
-                        <Link href="#" className='border border-gray-400 rounded-full text-sm font-semibold text-gray-400 px-8 py-2 my-8'>
-                            More
-                        </Link>
-                    </div>
-
-
 
                 </div>
                 {/* end right side */}

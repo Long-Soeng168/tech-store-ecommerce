@@ -125,7 +125,7 @@ const MyHeader = () => {
                                             Blogs
                                         </li>
                                         <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
-                                            Contact
+                                            <Link href='/contact-us'>Contact</Link>
                                         </li>
                                         <li className="hover:cursor-pointer hover:text-primary transition-colors duration-200">
                                             About
@@ -159,22 +159,28 @@ const MyHeader = () => {
                                 </li>
                                 <li className="border border-primary/5 h-6 bg-primary/50"></li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='/products' className="relative mx-2 group hover:text-primary cursor-pointer">
+                                        Products
+                                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href='/blogs' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         Blogs
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='contact-us' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         Contact
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='about-us' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         About
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
