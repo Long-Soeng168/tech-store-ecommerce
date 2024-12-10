@@ -1,6 +1,6 @@
 import Footer from '@/components/footer/footer';
-import MyHeader from '@/components/my-header';
-import MyService from '@/components/my-service';
+import MyFooter from '@/components/my-footer';
+import MyHeader from '@/components/my-header'; 
 import React from 'react'
 
 interface ChildrenType {
@@ -13,11 +13,9 @@ const ClientLayout: React.FC<ChildrenType> = ({ children }) => {
             <MyHeader />
             <main>
                 {children}
-            </main>
-
-            {/* <MyService /> */}
-            {/* <MyFeatureCards /> */}
-            <Footer />
+            </main> 
+            {/* <Footer /> */}
+            <MyFooter />
         </>
     )
 }

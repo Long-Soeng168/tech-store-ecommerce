@@ -25,28 +25,28 @@ const MyHeader = () => {
     return (
         <>
             <nav className="bg-primary text-white px-4">
-                <div className="text-sm flex py-4 justify-between items-center max-w-screen-xl mx-auto  text-gray-400">
-                    <div className="flex gap-2 items-center">
-                        {/* <div className="block">
-                            <Image
-                                width={65}
-                                height={65}
-                                src="/images/logo/logo.png"
-                                alt=""
-                                className=" hover:cursor-pointer"
-                            />
-                        </div> */}
+                <div className="text-sm flex flex-wrap justify-between items-center max-w-screen-xl mx-auto  text-gray-300">
+                    <Link href='/' className="flex gap-2 items-center">
+                        <Image
+                            width={65}
+                            height={65}
+                            src="/images/logo/logo.png"
+                            alt=""
+                            className=" hover:cursor-pointer"
+                        />
+                    </Link>
+                    <div className=" lg:flex items-center gap-2">
                         <div className="border hidden sm:block rounded-full px-4 py-1">
                             Mon-Thu:{" "}
                             <span className="font-semibold text-white hover:cursor-pointer">
                                 9:00-5:30 PM
                             </span>
                         </div>
-                    </div>
-                    <div className="hidden lg:inline-block">
-                        1234 Street Adress City Address, 1234
-                        <span className="font-semibold text-white pl-2 underline hover:cursor-pointer">
-                            <Link href="/contact-us">Contact Us</Link>
+                        <span className="hidden lg:block">
+                            1234 Street Adress City Address, 1234
+                            <span className="font-semibold text-white pl-2 underline hover:cursor-pointer">
+                                <Link href="/contact-us">Contact Us</Link>
+                            </span>
                         </span>
                     </div>
                     <div className="flex gap-4 font-semibold text-white items-center">
@@ -81,14 +81,14 @@ const MyHeader = () => {
             </nav>
             <div >
                 <header>
-                    <div className="flex px-4 md:px-2 lg:px-0 max-w-screen-xl items-center justify-between mx-auto">
+                    <div className="flex py-2 lg:py-4 px-4 md:px-2 lg:px-0 max-w-screen-xl items-center justify-between mx-auto">
                         <div className="flex items-center">
                             <Sheet>
                                 <div className="flex items-center gap-2">
                                     <SheetTrigger>
                                         <Menu className="size-8 text-primary lg:hidden" />
                                     </SheetTrigger>
-                                    <Link href="/">
+                                    {/* <Link href="/">
                                         <Image
                                             width={65}
                                             height={65}
@@ -96,7 +96,7 @@ const MyHeader = () => {
                                             alt=""
                                             className="cursor-pointer -translate-y-1"
                                         />
-                                    </Link>
+                                    </Link> */}
                                 </div>
                                 <SheetContent
                                     side="left"
@@ -133,9 +133,8 @@ const MyHeader = () => {
                                     </ul>
                                 </SheetContent>
                             </Sheet>
-
                         </div>
-                        <div className="hidden lg:flex flex-1 justify-evenly">
+                        <div className="hidden lg:flex flex-1">
                             <ul className="flex gap-2 font-semibold items-center">
                                 <li>
                                     <MyCategoriesNav />

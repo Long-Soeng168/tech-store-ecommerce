@@ -30,7 +30,7 @@ const feedbacks = [
 
 const MyBlogList = () => {
     return (
-        <div className="w-full md:grid px-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="w-full grid px-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {feedbacks.map((feedback) => (
                 <MyBlogCard key={feedback.id} {...feedback} />
             ))}

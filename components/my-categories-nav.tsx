@@ -20,7 +20,7 @@ export function MyCategoriesNav() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="border-none outline-none">
-        <span className="hover:text-primary group relative hover:text-white gap-1 flex items-center rounded p-2">
+        <span className="hover:text-primary group relative hover:text-primary gap-1 flex items-center rounded p-2">
           <p className="relative">
             Categories
             <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>

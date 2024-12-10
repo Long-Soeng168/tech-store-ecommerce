@@ -11,34 +11,37 @@ import MyMiddleSlide from "@/components/my-middle-slide";
 
 export default function Home() {
   return (
-    <div className="max-w-screen-xl mx-auto">
-      {/* start slide */}
-      <MySlide
-        images={[
-          "/images/slides/slide1.png",
-          "/images/slides/slide2.png",
-          "/images/slides/slide3.png",
-        ]} />
-      {/* end slide */}
+    <>
+      <div className="max-w-screen-xl mx-auto mb-10">
+        {/* start slide */}
+        <MySlide
+          images={[
+            "/images/slides/slide1.png",
+            "/images/slides/slide2.png",
+            "/images/slides/slide3.png",
+          ]}
+        />
+        {/* end slide */}
 
-      <MyProductListHeader title="New Arrivals" />
-      <MyProductList />
+        <MyProductListHeader title="New Arrivals" />
+        <MyProductList />
 
-      <MyMiddleSlide
-        images={[
-          "/images/slides/slide7.png",
-          "/images/slides/slide5.png",
-          "/images/slides/slide8.png",
-          "/images/slides/slide6.png",
-        ]} />
+        <MyMiddleSlide
+          images={[
+            "/images/slides/slide7.png",
+            "/images/slides/slide5.png",
+            "/images/slides/slide8.png",
+            "/images/slides/slide6.png",
+          ]}
+        />
 
-      <MyProductListCategories />
-      <MyProductListBrands />
+        <MyProductListCategories />
+        <MyProductListBrands />
 
-      <MyBrandList />
-      <MyBlogList />
-
-      <div className="h-20"></div>
-    </div>
+        <MyBrandList />
+        <MyBlogList />
+      </div>
+      <MyService />
+    </>
   );
 }
