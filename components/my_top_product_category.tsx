@@ -68,13 +68,8 @@ const MyTopProductCategory: React.FC<MyTopProductCategoryProps> = ({ products, c
                         <CarouselItem key={product.id} className="basis-1/2 sm:basis-1/3  md:basis-1/4 lg:basis-1/6">
                             <Card className='pl-6'>
                                 <MyProductCard
-                                    instock={product.instock}
-                                    image={product.imageUrl}
-                                    rating={product.rating}
-                                    reviews={product.reviews}
-                                    name={product.name}
-                                    price={product.price}
-                                    oldPrice={product.oldPrice}
+                                    key={product.id}
+                                   product={product}
                                 />
                             </Card>
                         </CarouselItem>

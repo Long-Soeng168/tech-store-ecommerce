@@ -1,25 +1,21 @@
 import Footer from '@/components/footer/footer';
-import MyHeader from '@/components/my-header';
-import MyService from '@/components/my-service';
+import MyFooter from '@/components/my-footer';
+import MyHeader from '@/components/my-header'; 
 import React from 'react'
 
-const ClientLayout = (
-    {
-        children
-    }
-        :
-        {
-            children: React.ReactNode;
-        }
-) => {
+interface ChildrenType {
+    children: React.ReactNode
+}
+
+const ClientLayout: React.FC<ChildrenType> = ({ children }) => {
     return (
         <>
             <MyHeader />
-            <main className=''>
+            <main>
                 {children}
-            </main>
-            <MyService/>
-            <Footer />
+            </main> 
+            {/* <Footer /> */}
+            <MyFooter />
         </>
     )
 }

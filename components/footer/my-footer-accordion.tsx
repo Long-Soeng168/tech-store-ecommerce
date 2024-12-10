@@ -1,8 +1,7 @@
 // components/AccordionComponent.tsx
 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@radix-ui/react-accordion';
 import Link from 'next/link';
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@radix-ui/react-accordion'; // Import Radix UI components
-
 interface LinkItem {
   label: string;
   href: string;
@@ -17,7 +16,7 @@ interface AccordionComponentProps {
   data: AccordionSection[];
 }
 
-const AccordionComponent: React.FC<AccordionComponentProps> = ({ data }) => {
+const AccordionComponent:React.FC<AccordionComponentProps> = ({ data }) => {
   return (
     <Accordion type="single" collapsible>
       {data.map((section, index) => (
@@ -27,7 +26,7 @@ const AccordionComponent: React.FC<AccordionComponentProps> = ({ data }) => {
           </AccordionTrigger>
           <AccordionContent>
             <ul className='mx-4 my-2 md:py-2 text-xs md:text-sm flex flex-col gap-2 text-gray-300'>
-            <hr />
+              <hr />
 
               {section.links.map((link, idx) => (
                 <li key={idx}>

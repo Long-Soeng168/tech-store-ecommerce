@@ -77,7 +77,7 @@ const products = [
         price: 1299.00,
     },
     {
-        id: 7,
+        id: 8,
         instock: false,
         imageUrl: '/images/new-products/8.png',
         rating: 3,
@@ -86,7 +86,7 @@ const products = [
         price: 1299.00,
     },
     {
-        id: 7,
+        id: 9,
         instock: false,
         imageUrl: '/images/new-products/9.png',
         rating: 3,
@@ -116,40 +116,26 @@ const products = [
 ];
 
 
-const MyNewProduct = () => {
+const MyProductList = () => {
     return (
-        <div className=''>
-            <div className='flex justify-between font-semibold pt-8 px-4 md:px-2 lg:px-0'>
-                <h1 className='text-xl'>New Product</h1>
-                <Link href='/products'>
-                    <p className='text-[12px] text-blue-500 underline'>See All New Products</p>
-                </Link>
-            </div>
-            <div className='p-2 md:p-0'>
-                <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full"
-                >
-                    <CarouselContent>
-                        {products.map((product) => (
-                            <CarouselItem key={product.id} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6">
-                                <CardContent className="flex flex-col pr-6">
-                                    <MyProductCard
-                                        // key={product.id} // Use a unique key here
-                                        product={product}
-                                    />
-                                </CardContent>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="hidden md:block absolute top-1/2 left-0 bg-gray-300 rounded rounded-r-full text-white border-none transform -translate-y-1/2 z-10" />
-                    <CarouselNext className="hidden md:block absolute top-1/2 right-0 bg-gray-300 rounded rounded-l-full text-white border-none transform -translate-y-1/2 z-10" />
-                </Carousel>
-            </div>
+
+        <div className='px-2'>
+            <Carousel>
+                <CarouselContent>
+                    {products.map((product) => (
+                        <CarouselItem key={product.id} className="basis-1/2 md:basis-1/3 xl:basis-1/6">
+                            <MyProductCard
+                                key={product.id} // Use a unique key here
+                                product={product}
+                            />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious className="top-1/2 left-0 bg-primary/50 rounded rounded-r-full text-white border-none transform -translate-y-1/2 z-10" />
+                <CarouselNext className="  top-1/2 right-0 bg-primary/50 rounded rounded-l-full text-white border-none transform -translate-y-1/2 z-10" />
+            </Carousel>
         </div>
     )
 }
 
-export default MyNewProduct
+export default MyProductList
