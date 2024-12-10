@@ -20,6 +20,17 @@ import BrandLogos from '@/components/BrandLogosProps ';
 import Image from 'next/image';
 import MyProductCard from '@/components/ui/my-product-card';
 import Link from 'next/link'
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Search } from 'lucide-react'
+
 
 interface Category {
     name: string;
@@ -170,7 +181,7 @@ const products = [
     {
         id: 11,
         instock: false,
-        imageUrl: '/images/new-products/11.png',
+        imageUrl: '/images/new-products/1.png',
         rating: 3,
         reviews: 8,
         name: 'Gaming Laptop MSI Raider GE76',
@@ -195,73 +206,7 @@ const Page = () => {
 
     return (
         <div className='max-w-screen-xl mx-auto'>
-            {/* slide product */}
-            <MySlide
-                images={[
-                    "/images/slides/slide1.png",
-                    "/images/slides/slide2.png",
-                    "/images/slides/slide3.png",
-                ]}
-            />
-
-            {/* end slide */}
-
-            {/* start list products */}
-            <h1 className='font-semibold text-3xl my-4'>MSI PS Series (20)</h1>
-
-            {/* start fillter products section */}
-            <div className='flex justify-between items-center mb-4'>
-                <div className='flex items-center'>
-                    <button className='w-64 font-semibold flex items-center justify-center'>
-                        <img src="/icons/left-arrow.png" alt="" className='w-2 mr-2' />
-                        <p>Back</p>
-                    </button>
-                    <p className='pl-2 text-sm text-gray-400'>Items 1-35 of 61</p>
-                </div>
-                <div className='flex'>
-                    <div className='flex gap-4 items-center'>
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1" className='border px-8'>
-                                <AccordionTrigger className='text-sm text-gray-400'>Sort By: <span className='text-sm text-gray-900 font-semibold pl-2'> Position</span></AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. It adheres to the WAI-ARIA design pattern.
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1" className='border px-8'>
-                                <AccordionTrigger className='text-sm text-gray-400'>Show: <span className='text-sm text-gray-900 font-semibold pl-2'> 35 per page</span></AccordionTrigger>
-                                <AccordionContent>
-                                    Yes. It adheres to the WAI-ARIA design pattern.
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-
-                        <div className='flex gap-4'>
-                            <div className='max-w-8'>
-                                <Image
-                                    src="/icons/1.png"
-                                    alt="img"
-                                    width={20}
-                                    height={20}
-                                />
-                            </div>
-                            <div className='max-w-8'>
-                                <Image
-                                    src="/icons/filter.png"
-                                    alt="img"
-                                    width={20}
-                                    height={20}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* end fillter products section */}
-
             <div className='flex mr-2'>
-
                 {/* start left side */}
                 <div className='w-64'>
                     <div className=' bg-blue-50 p-4'>
@@ -387,50 +332,79 @@ const Page = () => {
                 {/* end left side */}
 
                 {/* start right side */}
-                <div className='flex-1 pl-4'>
-                    {/* start list products */}
-                    <div className="grid grid-cols-5">
-                        {products.map((product) => (
-                            <MyProductCard
-                                key={product.id}
-                                product={product}
-                            />
-                        ))}
+                {/* start fillter products section */}
+                <div>
+                    <div className='flex justify-between items-center mb-4 gap-4 px-2'>
+                        <Input className='flex-1 border-primary focus:border-primary focus:border-1' placeholder='Search Products...' />
+                        <div className='flex gap-4 items-center'>
+                            <Select>
+                                <SelectTrigger className="w-[180px]">
+                                    <SelectValue placeholder="Sort By : " />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="light">Title</SelectItem>
+                                    <SelectItem value="dark">Price</SelectItem>
+                                    <SelectItem value="system">Post Date</SelectItem>
+                                </SelectContent>
+                            </Select>
+                            <Select>
+                                <SelectTrigger className="w-auto">
+                                    <SelectValue placeholder="Per Page : " />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="10">10 Per Page</SelectItem>
+                                    <SelectItem value="20">20 Per Page</SelectItem>
+                                    <SelectItem value="30">30 Per Page</SelectItem>
+                                    <SelectItem value="40">40 Per Page</SelectItem>
+                                    <SelectItem value="50">50 Per Page</SelectItem>
+                                    <SelectItem value="60">100 Per Page</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
                     </div>
-                    {/* end list products */}
-
-                    {/* start pagination */}
-                    <div className='flex justify-center my-16'>
-                        <Pagination>
-                            <PaginationContent>
-                                <PaginationItem>
-                                    <PaginationPrevious href="#" />
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#">1</PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#" isActive>
-                                        2
-                                    </PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#">3</PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationEllipsis />
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationNext href="#" />
-                                </PaginationItem>
-                            </PaginationContent>
-                        </Pagination>
+                    {/* end fillter products section */}
+                    <div className='flex-1 pl-4'>
+                        {/* start list products */}
+                        <div className="grid grid-cols-5">
+                            {products.map((product) => (
+                                <MyProductCard
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))}
+                        </div>
+                        {/* end list products */}
+                        {/* start pagination */}
+                        <div className='flex justify-center my-16'>
+                            <Pagination>
+                                <PaginationContent>
+                                    <PaginationItem>
+                                        <PaginationPrevious href="#" />
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#">1</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#" isActive>
+                                            2
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#">3</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationNext href="#" />
+                                    </PaginationItem>
+                                </PaginationContent>
+                            </Pagination>
+                        </div>
+                        {/* end pagination */}
                     </div>
-                    {/* end pagination */}
-
+                    {/* end right side */}
                 </div>
-                {/* end right side */}
-
             </div>
 
             {/* end list products */}

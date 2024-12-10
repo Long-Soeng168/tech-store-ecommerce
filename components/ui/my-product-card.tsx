@@ -22,7 +22,7 @@ const MyProductCard = (
         }
 ) => {
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col rounded-md overflow-hidden m-2'>
             {/* Product Image */}
             <Image
                 width={600}
