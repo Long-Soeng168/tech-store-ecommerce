@@ -10,9 +10,6 @@ import React from 'react';
 const Page = () => {
     return (
         <div className="max-w-screen-xl mx-auto px-4 md:px-8 mb-20">
-            {/* Breadcrumb */}
-            <p className="my-2 text-sm text-gray-600">Home › Contact Us</p>
-
             {/* Page Title */}
             <h1 className="text-3xl md:text-4xl font-semibold my-6">Contact Us</h1>
 
@@ -85,7 +82,7 @@ const Page = () => {
                 <div className="flex flex-col gap-6 bg-blue-50 p-6 rounded-lg w-full md:w-1/3">
                     <div>
                         <div className="flex items-center gap-3">
-                            <MapPin className="text-blue-600" />
+                            <MapPin className="text-primary" />
                             <h2 className="text-lg font-semibold">Address:</h2>
                         </div>
                         <p className="ml-8 text-sm text-gray-600">1234 Street Address City Address, 1234</p>
@@ -93,7 +90,7 @@ const Page = () => {
 
                     <div>
                         <div className="flex items-center gap-3">
-                            <PhoneCall className="text-blue-600" />
+                            <PhoneCall className="text-primary" />
                             <h2 className="text-lg font-semibold">Phone:</h2>
                         </div>
                         <p className="ml-8 text-sm text-gray-600">(00) 1234 5678</p>
@@ -101,7 +98,7 @@ const Page = () => {
 
                     <div>
                         <div className="flex items-center gap-3">
-                            <Clock className="text-blue-600" />
+                            <Clock className="text-primary" />
                             <h2 className="text-lg font-semibold">We are open:</h2>
                         </div>
                         <p className="ml-8 text-sm text-gray-600">
@@ -113,10 +110,10 @@ const Page = () => {
 
                     <div>
                         <div className="flex items-center gap-3">
-                            <Mail className="text-blue-600" />
+                            <Mail className="text-primary" />
                             <h2 className="text-lg font-semibold">Email:</h2>
                         </div>
-                        <p className="ml-8 text-sm text-blue-600">shop@email.com</p>
+                        <p className="ml-8 text-sm text-primary">shop@email.com</p>
                     </div>
                 </div>
             </div>

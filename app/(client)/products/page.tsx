@@ -1,5 +1,4 @@
 "use client"
-import MySlide from '@/components/my-slide'
 import React, { useState } from 'react'
 import {
     Accordion,
@@ -19,7 +18,6 @@ import {
 import BrandLogos from '@/components/BrandLogosProps ';
 import Image from 'next/image';
 import MyProductCard from '@/components/ui/my-product-card';
-import Link from 'next/link'
 import {
     Select,
     SelectContent,
@@ -29,62 +27,8 @@ import {
 } from "@/components/ui/select"
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Search } from 'lucide-react'
-
-
-interface Category {
-    name: string;
-    value: string;
-}
-
-interface ColorOption {
-    name: string;
-    colorCode: string;
-}
-
-interface AccordionContentProps {
-    categories: Category[];
-    colorCode: ColorOption[];
-}
-const categories = [
-    { name: 'CUSTOM PCS', value: '15' },
-    { name: 'MSI ALL-IN-ONE PCS', value: '45' },
-    { name: 'HP/COMPAQ PCS', value: '1' },
-];
-
-const prices = [
-    { rangPrice: '$0.00 - $1,000.00', value: '19' },
-    { rangPrice: '$1,000.00 - $2,000.00', value: '21' },
-    { rangPrice: '$2,000.00 - $3,000.00', value: '9' },
-    { rangPrice: '$3,000.00 - $4,000.00', value: '6' },
-    { rangPrice: '$4,000.00 - $5,000.00', value: '3' },
-    { rangPrice: '$5,000.00 - $6,000.00', value: '1' },
-    { rangPrice: '$6,000.00 - $7,000.00', value: '1' },
-    { rangPrice: '$7,000.00 And Above', value: '1' },
-];
-
-
-const colors = [
-    { name: 'Red', colorCode: '#FF0000' },
-    { name: 'Green', colorCode: '#00FF00' },
-    { name: 'Blue', colorCode: '#0000FF' },
-    { name: 'Yellow', colorCode: '#FFFF00' },
-    { name: 'Black', colorCode: '#000' },
-    { name: 'White', colorCode: '#fff' },
-];
-
-
-
-const logos = [
-    { src: '/images/logo/brand/1.png', alt: 'Brand 1' },
-    { src: '/images/logo/brand/2.png', alt: 'Brand 2' },
-    { src: '/images/logo/brand/3.png', alt: 'Brand 3' },
-    { src: '/images/logo/brand/4.png', alt: 'Brand 4' },
-    { src: '/images/logo/brand/5.png', alt: 'Brand 5' },
-    { src: '/images/logo/brand/6.png', alt: 'Brand 6' },
-    { src: '/images/logo/brand/7.png', alt: 'Brand 7' },
-];
-
+import { AlignLeft, Laptop, MonitorSpeaker, Router } from 'lucide-react'
+import { MyBrandsFilter } from '@/components/my-brands-filter'
 
 const products = [
     {
@@ -197,135 +141,91 @@ const products = [
 
 const Page = () => {
 
-    const [selectedColor, setSelectedColor] = useState<string | null>(null);
-
-    const handleColorSelect = (colorName: string) => {
-        setSelectedColor(colorName);
-    };
-
-
     return (
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto mb-8'>
             <div className='flex mr-2'>
                 {/* start left side */}
-                <div className='w-64'>
-                    <div className=' bg-blue-50 p-4'>
+                <div className='w-64 hidden lg:block'>
+                    <div className=' bg-indigo-50 px-2 pt-4'>
                         <div className='flex flex-col items-center'>
                             <h3 className='font-semibold text-xl mb-4'>Filters</h3>
-                            <input
-                                type="text"
-                                placeholder='Clear Filter'
-                                className='text-sm text-center border rounded-full py-2 px-4'
-                            />
                         </div>
-                        {/* start category  */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className='font-semibold text-sm'>Category</AccordionTrigger>
-                                <AccordionContent className=''>
-                                    {categories.map((category, index) => (
-                                        <div key={index} className="text-xs flex pb-2 justify-between items-center">
-                                            <p>{category.name}</p>
-                                            <p>{category.value}</p>
-                                        </div>
-                                    ))}
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-                        {/* end category  */}
-                        {/* start price  */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className='font-semibold text-sm'>Prices</AccordionTrigger>
-                                <AccordionContent className=''>
-                                    {prices.map((price, index) => (
-                                        <div key={index} className="text-xs flex pb-2 justify-between items-center">
-                                            <p>{price.rangPrice}</p>
-                                            <p>{price.value}</p>
-                                        </div>
-                                    ))}
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-                        {/* end price  */}
-                        {/* start color  */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className='font-semibold text-sm'>Color</AccordionTrigger>
-                                <AccordionContent className='flex gap-2'>
-                                    <div className="flex gap-2 flex-wrap mt-2">
-                                        {colors.map((color) => (
-                                            <div key={color.name} className="flex items-center gap-2">
-                                                <input
-                                                    type="radio"
-                                                    id={color.name}
-                                                    name="color"
-                                                    value={color.name}
-                                                    checked={selectedColor === color.name}
-                                                    onChange={() => handleColorSelect(color.name)}
-                                                    className="hidden"
-                                                />
-                                                <label
-                                                    htmlFor={color.name}
-                                                    className={`w-6 h-6 rounded-full cursor-pointer ${selectedColor === color.name ? 'outline p-2 outline-2 outline-blue-500' : ''
-                                                        }`}
-                                                    style={{ backgroundColor: color.colorCode }}
-                                                    title={color.name}
-                                                ></label>
-                                            </div>
-                                        ))}
+                        <div>
+                            <p className='font-semibold text-sm text-primary flex items-center gap-1 '><AlignLeft size={18} /> Categories</p>
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="item-1">
+                                    <div className='flex w-full justify-between items-center text-base'>
+                                        <span className='hover:text-primary hover:underline cursor-pointer w-full flex-1 p-1 flex items-center gap-1'><Laptop />Laptop</span>
+                                        <AccordionTrigger className='h-full p-2 hover:bg-primary hover:text-white'></AccordionTrigger>
                                     </div>
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
-                        {/* end color  */}
-                        {/* strat filter name */}
-                        <Accordion type="single" collapsible>
-                            <AccordionItem value="item-1">
-                                <AccordionTrigger className='font-semibold text-sm'>Filter Name</AccordionTrigger>
-                                <AccordionContent className='flex justify-center'>
-                                    <button className='bg-blue-500 rounded-full px-14 py-2 text-white'>Apply Filters (2)</button>
-                                </AccordionContent>
-                            </AccordionItem>
-                        </Accordion>
+                                    <AccordionContent>
+                                        <ul className='ml-4 pl-4 border-l-2 border-primary text-sm'>
+                                            <li className='cursor-pointer hover:underline'>Notebook</li>
+                                            <li className='cursor-pointer hover:underline'>Gaming & Design</li>
+                                        </ul>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="item-1">
+                                    <div className='flex w-full justify-between items-center text-base'>
+                                        <span className='hover:text-primary hover:underline cursor-pointer w-full flex-1 p-1 flex items-center gap-1'><MonitorSpeaker />Desktop</span>
+                                        <AccordionTrigger className='h-full p-2 hover:bg-primary hover:text-white'></AccordionTrigger>
+                                    </div>
+                                    <AccordionContent>
+                                        <ul className='ml-4 pl-4 border-l-2 border-primary text-sm'>
+                                            <li className='cursor-pointer hover:underline'>All in One PC</li>
+                                            <li className='cursor-pointer hover:underline'>Custom PC</li>
+                                            <li className='cursor-pointer hover:underline'>Used Desktop</li>
+                                        </ul>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                            <Accordion type="single" collapsible>
+                                <AccordionItem value="item-1">
+                                    <div className='flex w-full justify-between items-center text-base'>
+                                        <span className='hover:text-primary hover:underline cursor-pointer w-full flex-1 p-1 flex items-center gap-1'>
+                                            <Router />Network Device
+                                        </span>
+                                        <AccordionTrigger className='h-full p-2 hover:bg-primary hover:text-white'></AccordionTrigger>
+                                    </div>
+                                    <AccordionContent>
+                                        <ul className='ml-4 pl-4 border-l-2 border-primary text-sm'>
+                                            <li className='cursor-pointer hover:underline'>Router</li>
+                                            <li className='cursor-pointer hover:underline'>Switch</li>
+                                            <li className='cursor-pointer hover:underline'>Network Cable</li>
+                                            <li className='cursor-pointer hover:underline'>Network Connector</li>
+                                        </ul>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        </div>
+                        {/* end category  */}
+
+                        <div className='mt-8'>
+                            <p className='font-semibold text-sm text-primary flex items-center gap-1 mb-2'><AlignLeft size={18} /> Brands</p>
+                            <MyBrandsFilter />
+                        </div>
+
+                        <Button className=' w-full my-8'>Apply Filter</Button>
+
                         {/* end filter name */}
                     </div>
-
-                    {/* start brand */}
-                    <div className='bg-blue-50 p-4 my-2'>
-                        <div className='flex flex-col items-center'>
-                            <h3 className='font-semibold text-xl mb-4'>Brands</h3>
-                            <input
-                                type="text"
-                                placeholder='All Brands'
-                                className='text-sm text-center border rounded-full py-2 px-4'
-                            />
-                        </div>
-                    </div>
-                    <BrandLogos logos={logos}
-                        className='grid grid-cols-2 p-4 gap-8 py-4 bg-blue-50'
-                    />
                     {/* end brand */}
-
-                    <div className='bg-blue-50 p-4 my-2'>
-                        <div className='flex flex-col items-center'>
-                            <h3 className='font-semibold text-xl mb-4'>Compare Products</h3>
-                            <p className='text-sm text-center'>You have no items to compare.</p>
-                        </div>
-                    </div>
-                    <div className='bg-blue-50 p-4 my-2'>
-                        <div className='flex flex-col items-center'>
-                            <h3 className='font-semibold text-xl mb-4'>My Wish List</h3>
-                            <p className='text-sm text-center'>You have no items in your wish list.</p>
-                        </div>
-                    </div>
-                    <div>
+                    <div className='mt-8 w-full space-y-2'>
                         <Image
-                            src={"/images/products/2.png"}
+                            src={"/images/banners/banner2.png"}
                             alt=''
-                            width={256}
-                            height={0}
+                            width={600}
+                            height={600}
                         />
+                        <Image
+                            src={"/images/banners/banner3.png"}
+                            alt=''
+                            width={600}
+                            height={600}
+                        />
+
                     </div>
 
                 </div>
@@ -333,12 +233,12 @@ const Page = () => {
 
                 {/* start right side */}
                 {/* start fillter products section */}
-                <div>
-                    <div className='flex justify-between items-center mb-4 gap-4 px-2'>
-                        <Input className='flex-1 border-primary focus:border-primary focus:border-1' placeholder='Search Products...' />
+                <div className='flex-1'>
+                    <div className='flex justify-end md:justify-between items-center  mb-4 gap-4 px-2'>
+                        <Input className='flex-1 border-primary hidden md:block rounded-full focus:border-primary focus:border-1' placeholder='Search Products...' />
                         <div className='flex gap-4 items-center'>
                             <Select>
-                                <SelectTrigger className="w-[180px]">
+                                <SelectTrigger className="w-[180px] rounded-full">
                                     <SelectValue placeholder="Sort By : " />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -348,7 +248,7 @@ const Page = () => {
                                 </SelectContent>
                             </Select>
                             <Select>
-                                <SelectTrigger className="w-auto">
+                                <SelectTrigger className="w-auto rounded-full">
                                     <SelectValue placeholder="Per Page : " />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -365,7 +265,7 @@ const Page = () => {
                     {/* end fillter products section */}
                     <div className='flex-1 pl-4'>
                         {/* start list products */}
-                        <div className="grid grid-cols-5">
+                        <div className="grid  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                             {products.map((product) => (
                                 <MyProductCard
                                     key={product.id}

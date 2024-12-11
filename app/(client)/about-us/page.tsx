@@ -5,17 +5,11 @@ import React from 'react';
 const AboutUsPage = () => {
     return (
         <div>
-            <div className="max-w-screen-xl mx-auto px-4 lg:px-0">
-                <p className="text-gray-500">Home › About Us</p>
-                <h1 className="text-3xl font-semibold my-8">About Us</h1>
-            </div>
-
-            {/* Section 1 */}
-            <div className="bg-black text-white">
+            <div className="bg-primary text-white">
                 <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between px-4 lg:px-24 py-16">
                     <div className="w-full lg:w-1/2 lg:pr-16">
                         <h3 className="text-4xl lg:text-5xl font-semibold mb-4">A Family That Keeps On Growing</h3>
-                        <div className="text-lg lg:text-xl text-gray-400">
+                        <div className="text-lg lg:text-xl text-gray-200">
                             <p className="mb-4">
                                 We always aim to please the home market, supplying great computers and hardware at great
                                 prices to non-corporate customers, through our large Melbourne CBD showroom and our online
@@ -57,7 +51,7 @@ const AboutUsPage = () => {
                             </div>
                             <h3 className="text-4xl lg:text-5xl font-semibold">Shop.com</h3>
                         </div>
-                        <div className="text-lg lg:text-xl text-gray-400 mt-4">
+                        <div className="text-lg lg:text-xl text-gray-600 mt-4">
                             <p className="mb-4">
                                 We always aim to please the home market, supplying great computers and hardware at great
                                 prices to non-corporate customers, through our large Melbourne CBD showroom and our online
@@ -74,7 +68,7 @@ const AboutUsPage = () => {
             </div>
 
             {/* Section 3 */}
-            <div className="bg-black text-white">
+            <div className="bg-primary text-white">
                 <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between px-4 lg:px-24 py-16">
                     <div className="w-full lg:w-1/2">
                         <div className="flex gap-4 items-center">
@@ -83,7 +77,7 @@ const AboutUsPage = () => {
                             </div>
                             <h3 className="text-4xl lg:text-5xl font-semibold">Now You're In Safe Hands</h3>
                         </div>
-                        <div className="text-lg lg:text-xl text-gray-400 mt-4">
+                        <div className="text-lg lg:text-xl text-gray-200 mt-4">
                             <p className="mb-4">
                                 We always aim to please the home market, supplying great computers and hardware at great
                                 prices to non-corporate customers, through our large Melbourne CBD showroom and our online

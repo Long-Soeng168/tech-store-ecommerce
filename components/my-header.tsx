@@ -1,17 +1,12 @@
 import {
-    AlignLeft,
-    Facebook,
-    FormInput,
     Menu,
     Search,
-    SearchCheckIcon,
     ShoppingCart,
     User2Icon,
 } from "lucide-react";
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -140,22 +135,22 @@ const MyHeader = () => {
                                     <MyCategoriesNav />
                                 </li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='/products' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         Laptops
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='/products' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         Desktop
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <p className="relative mx-2 group hover:text-primary cursor-pointer">
+                                    <Link href='/products' className="relative mx-2 group hover:text-primary cursor-pointer">
                                         Networking Device
                                         <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-primary group-hover:w-full"></span>
-                                    </p>
+                                    </Link>
                                 </li>
                                 <li className="border border-primary/5 h-6 bg-primary/50"></li>
                                 <li>

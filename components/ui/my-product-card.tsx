@@ -1,5 +1,6 @@
 import { Star, Verified } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface MyProductCardProps {
@@ -22,7 +23,7 @@ const MyProductCard = (
         }
 ) => {
     return (
-        <div className='flex flex-col rounded-md overflow-hidden m-2'>
+        <Link href={`/products/1`} className='flex flex-col rounded-md overflow-hidden m-2'>
             {/* Product Image */}
             <Image
                 width={600}
@@ -49,7 +50,7 @@ const MyProductCard = (
                     <p className='text-md text-red-400 '>${product.price.toFixed(2)}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
