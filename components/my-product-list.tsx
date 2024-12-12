@@ -119,7 +119,7 @@ const products = [
 const MyProductList = () => {
     return (
 
-        <div className='px-2'>
+        <div>
             <Carousel>
                 <CarouselContent>
                     {products.map((product) => (

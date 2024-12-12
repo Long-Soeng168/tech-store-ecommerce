@@ -238,7 +238,7 @@ const Page = () => {
                         <Input className='flex-1 border-primary hidden md:block rounded-full focus:border-primary focus:border-1' placeholder='Search Products...' />
                         <div className='flex gap-4 items-center'>
                             <Select>
-                                <SelectTrigger className="w-[180px] rounded-full">
+                                <SelectTrigger className="w-auto rounded-full">
                                     <SelectValue placeholder="Sort By : " />
                                 </SelectTrigger>
                                 <SelectContent>
